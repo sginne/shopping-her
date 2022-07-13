@@ -1,0 +1,24 @@
+<h1><%= it.name %></h1>
+<% it.items.rows.forEach((item) => { %>
+<ul>
+
+    <li>
+      <form method="POST" action="lists/<%= item.id %>/collect">
+        <%= item.name %>
+        <input type="submit" value="Mark collected!" />(<small>id:<%= item.id %></small>)
+      </form>
+    </li>
+    
+
+</ul>
+
+<% }); %>
+<form method="POST" action="/lists/<%= it.id %>/items">
+  <input type="text" name="name" /><br/>
+  <input type="hidden" name="id" value="<%= it.id %>">
+  <input type="submit" value="Add item" />
+
+
+</form>
+<a href="/lists">shopping lists</a>
+

@@ -1,0 +1,21 @@
+<h1>Active</h1>
+<% it.rows.forEach((list) => { %>
+<ul>
+
+    <li><form method="POST" action="lists/<%= list.id %>/deactivate">
+    <a href="/lists/<%= list.id %>"><%= list.name %></a>
+      <input type="hidden" value="<%= list.id %>">
+      <input type="submit" value="Deactivate list!" />(<%= list.id %>)
+    </form>
+    </li>
+</ul>
+
+<% }); %>
+<form method="POST" action="/lists">
+  <input type="text" name="name" /><br/>
+  <input type="submit" value="Add list" />
+
+
+</form>
+<a href="/">Main page></a>
+
