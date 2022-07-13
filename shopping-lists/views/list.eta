@@ -3,9 +3,16 @@
 <ul>
 
     <li>
-      <form method="POST" action="lists/<%= item.id %>/collect">
-        <%= item.name %>
-        <input type="submit" value="Mark collected!" />(<small>id:<%= item.id %></small>)
+      <form method="POST" action="/lists/<%= it.id %>/items/<%= item.id %>/collect">
+
+        <% if (item.collected) { %>
+            <del><%= item.name %></del>
+        <% } else { %>
+          <%= item.name %>
+          <input type="submit" value="Mark collected!" />(<small>id:<%= item.id %></small>)
+        <% } %>
+
+        
       </form>
     </li>
     

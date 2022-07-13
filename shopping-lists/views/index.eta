@@ -1,2 +1,4 @@
 <h1>Shared shopping lists</h1>
+Shopping lists: <%= it.lists %><br>
+Shopping list items: <%= it.items %><br>
 <a href="/lists">Lists</a>

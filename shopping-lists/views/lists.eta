@@ -5,7 +5,7 @@
     <li><form method="POST" action="lists/<%= list.id %>/deactivate">
     <a href="/lists/<%= list.id %>"><%= list.name %></a>
       <input type="hidden" value="<%= list.id %>">
-      <input type="submit" value="Deactivate list!" />(<%= list.id %>)
+      <input type="submit" value="Deactivate list!" />(<small>id:<%= list.id %></small>)
     </form>
     </li>
 </ul>
@@ -17,5 +17,5 @@
 
 
 </form>
-<a href="/">Main page></a>
+<a href="/">Main page>
 

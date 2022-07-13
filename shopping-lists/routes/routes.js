@@ -9,6 +9,7 @@ router.post("/lists", mainController.addList);
 router.get("/lists/:id", mainController.showList);
 router.post("/lists/:id/deactivate", mainController.deactivateList);
 router.post("/lists/:id/items", mainController.addItem);
+router.post("/lists/:id/items/:item_id/collect", mainController.collectItem);
 
 
 
