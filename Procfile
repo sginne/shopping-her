@@ -1,1 +1,1 @@
-web: cd shopping-lists; deno run --allow-net --allow-read --allow-env  app.js --port=80
+web: cd shopping-lists; deno run --allow-net --allow-read --allow-env  app.js --port=$PORT
